@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Regretion" verbose="1">
+    <test name="Regretion">
+        <classes>
+            <class name="phonebooknew.HomePageTests"/>
+            <class name="phonebooknew.LoginTests"/>
+            <class name="phonebooknew.AddContactTests"/>
+            <class name="phonebooknew.RemoveContactTests"/>
+        </classes>
+    </test>
+</suite>

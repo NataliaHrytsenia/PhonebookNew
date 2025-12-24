@@ -43,7 +43,7 @@ public class HelperBase {
 
     //assert alert is appeared (проверяем появилось ли окно с ошибкой что такой пользователь уже существует)
     public boolean isAlertPresent(){
-        Alert alert = new WebDriverWait(driver, Duration.ofSeconds(20)).until(ExpectedConditions.alertIsPresent());//мы ждем появления всплывающего окна 20 секунд
+        Alert alert = new WebDriverWait(driver, Duration.ofSeconds(40)).until(ExpectedConditions.alertIsPresent());//мы ждем появления всплывающего окна 20 секунд
         if (alert==null){
             return false;
         }else{

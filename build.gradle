@@ -15,5 +15,21 @@ dependencies {
 }
 
 test {
-    useJUnitPlatform()
+    useTestNG()
+}
+
+
+task qa(type:Test) {
+    useTestNG()
+    if (project.hasProperty('browser')) {
+        systemProperty 'browser', "${browser}"
+    }
+    task qa1(type:Test) {
+    useTestNG(){
+    suites 'src/test/resources/testng.xml'
+    }
+    }
+    if (project.hasProperty('browser')){
+        systemProperty 'browser', "${browser}"
+    }
 }

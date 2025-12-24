@@ -10,7 +10,7 @@ public class UserHelper extends HelperBase {
     }
 
     public void clickOnLoginLink() {
-        click(By.cssSelector("a:nth-child(4)"));
+        click(By.xpath("//a[.='LOGIN']"));
     }
 
     public void ClickOnSignOutButton() {

@@ -11,4 +11,8 @@ public class HomePageHelper extends HelperBase {
     public boolean isHomeComponentPresent(){
         return driver.findElements(By.xpath("//h1[text()='Home Component']")).size()>0; // найди хотя бы один элемент на странице
     }
+
+    public void clickOnHomeLink() {
+        click(By.xpath("//a[.='HOME']"));
+    }
 }

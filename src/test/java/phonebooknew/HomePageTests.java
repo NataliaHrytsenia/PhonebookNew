@@ -1,10 +1,17 @@
 package phonebooknew;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class HomePageTests extends TestBase { // этот класс наследник класса TestBase
 
+    @BeforeMethod
+    public void ensurePrecondition(){
+        if (!app.getHomePage().isHomeComponentPresent()){
+            app.getHomePage().clickOnHomeLink();
+        }
+    }
     @Test
     public void isHomeComponentPresentTest(){
         //driver.findElement(By.xpath("//h1[text()='Home Component']"));// найди элемент по этому локатору

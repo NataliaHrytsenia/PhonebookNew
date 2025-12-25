@@ -13,7 +13,7 @@ public class TestBase {
         app.init(); //метод обращается через Application Manager
     }
 
-    @AfterMethod (enabled = false) //замораживаем закрытие окна пока сами не закроем, чтобы видеть что происходит на странице
+    @AfterMethod (enabled = true) //замораживаем закрытие окна пока сами не закроем, чтобы видеть что происходит на странице
     public void tearDown(){
 
         app.stop();
